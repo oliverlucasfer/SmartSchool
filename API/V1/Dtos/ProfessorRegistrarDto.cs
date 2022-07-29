@@ -1,6 +1,6 @@
 using System;
 
-namespace API.Dtos
+namespace API.V1.Dtos
 {
     public class ProfessorRegistrarDto
     {

@@ -1,17 +1,21 @@
 using System.Collections.Generic;
 using API.Data;
-using API.Dtos;
+using API.V1.Dtos;
 using API.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API.Controllers
+namespace API.V1.Controllers
 {
+    /// <summary>
+    /// Versão 1 do meu controlador de Professores
+    /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class ProfessorController : ControllerBase
     {
-private readonly IRepository _repo;
+        private readonly IRepository _repo;
         private readonly IMapper _mapper;
         public ProfessorController(IRepository repo, IMapper mapper)
         {
